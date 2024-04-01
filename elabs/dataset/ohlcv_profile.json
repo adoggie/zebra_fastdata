@@ -1,0 +1,21 @@
+{
+    "ver":"1.0",
+    "name": "ohlcv", 
+    "handler":"elabs.dataset.handler.ohlcv.on_data",
+    "date_range": [ "2021-01-01" ,"2023-01-01"],
+    "period": "1M",
+    "bitwide" : 64,    
+    "children": [        
+        { "name": "O" , "file":"open.dat"}
+        ,{ "name": "H" , "file":"high.dat" }
+        ,{ "name": "L" , "file":"low.dat" }
+        ,{ "name": "C" , "file":"close.dat" }
+        ,{ "name": "V" , "file":"vol.dat" }
+        ,{ "name": "OPI" , "file":"opi.dat" },
+        { "name": "AMT" , "file":"amt.dat" },
+        { "name": "BV" , "file":"bv.dat" },
+        { "name": "BAMT" , "file":"bamt.dat" },
+        { "name": "TRAN" , "file":"tran.dat" },
+        { "name": "MKR" , "file":"mkr.dat" }
+    ]
+}

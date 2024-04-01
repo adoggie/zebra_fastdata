@@ -1,0 +1,15 @@
+
+{
+    "mongodb":{ "host":"127.0.0.1", "port": 27017 },
+    "data_dir":"/mnt/data14t/test",
+    "datasets":{
+        "ohlcv": { 
+            "db":"BSC_swap" ,
+            "collection_prefix": "swap_1_",
+            "profile":"ohlcv_profile.json",
+            "symbols":"symbol_ohlcv.txt",
+            "mx_addr":["tcp://172.16.30.3:15562","tcp://172.16.30.3:15554"],
+            "topic": "1.0,kl,bsc,swap,1m"
+        }
+    }
+}

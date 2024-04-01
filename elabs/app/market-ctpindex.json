@@ -1,0 +1,60 @@
+{
+  "logger.level":"DEBUG",
+  "logger.path": "./",
+  "logger.filename": "market-ctpindex.log",
+  "logger.stdout": 1,
+
+  "service_id": "market-ctpindex",
+  "service_type": "market",
+  "secret_key": "1234567890abcdef1234567890abcdef",
+  "ip": "10.60.10.20",
+  "tag": "ctpindex",
+
+  "system_broker_addr_p": "tcp://sh-mx:15551",
+  "system_broker_addr_s": "tcp://sh-mx:15552",
+
+  "market_public_broker_addr": "tcp://sh-mx:15553",
+  "market_local_broker_addr": "tcp://127.0.0.1:15559",
+  "market_attach_broker_addr": "tcp://sh-mx:15561",
+  "registry_url": "http://172.16.10.253:17027",
+
+  "registry_client.enable": 0,
+  "registry_client.logger.level":"INFO",
+  "registry_client.subscribe": ["2.0,market:market"],
+  "exchange": "ctp",
+  "account": "",
+
+  "class": "elabs.market.ctpindex.CtpIndexMarket",
+  "develop_mode": 1,
+  "production_proxy": "",
+  "ctp_index_mx_addr": "tcp://192.168.10.137:11221",
+  "_ctp_index_mx_addr": "tcp://10.60.10.8:11221",
+  "ctp_index_sub_topic": "EL/CTP_XZ/K/1m",
+  "_ctp_index_sub_topic": "",
+  "SYMBOL_LIST" : ["A","AG","AL","AU","BU","C","CF","CS","CU","FG",
+    "HC","I","J","JD","JM","L","M","MA","NI","OI",
+    "P","PP","PB","RB","RM","RU","SR","TA","YY","ZC","ZN","IC","IH","IF","V","SM","T","TF",
+    "AP","SC","FU","SP","B", "EG", "CJ","EB","NR","UR","SN", "PG", "SS","SF", "SA", "CY", "LU",
+               "PK","LH","PF"],
+  "INDEX_DB": {
+    "host": "43.240.124.22",
+    "port": 41007,
+    "user": "yuyang",
+    "passwd": "helloworld",
+    "database": "quotes",
+    "charset": "utf8"
+  },
+  "_host": "10.60.10.8",
+  "_port": 3306,
+  "kline_cache_enable": 1,
+  "kline_cache_days" : 2,
+  "kline_cache_dir": "/tmp/ctpindex",
+  "kline_max_size":200,
+  "kline_cache_check_timeout": 5,
+  "keepalive_interval": 5,
+  "pull_sleep": 0.1,
+  "snapshot_interval": 5
+
+
+
+}

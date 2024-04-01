@@ -1,0 +1,44 @@
+{
+  "logger.level":"DEBUG",
+  "logger.path": "./",
+  "logger.filename": "market02.log",
+  "logger.stdout": 1,
+
+  "service_id": "market02",
+  "service_type": "market",
+  "secret_key": "1234567890abcdef1234567890abcdef",
+
+  "_system_broker_addr": "tcp://127.0.0.1:15555",
+  "system_broker_addr_p": "tcp://172.16.10.253:15551",
+  "system_broker_addr_s": "tcp://172.16.10.253:15552",
+
+  "_position_broker_addr": "tcp://127.0.0.1:15555",
+  "market_public_broker_addr": "tcp://172.16.10.253:15553",
+  "market_local_broker_addr": "tcp://127.0.0.1:15569",
+  "registry_url": "http://172.16.10.253:17027",
+
+  "registry_client.enable": 0,
+  "exchange": "ftx",
+  "account": "",
+
+  "class": "elabs.market.abc.MyMarketImpl",
+  "develop_mode": 1,
+  "production_proxy": "",
+  "develop_proxy": "socks5://192.168.30.3:15011",
+
+  "kline_cahce_enable": 1,
+  "kline_cache_days" : 2,
+  "kline_cache_dir": "./kline",
+  "kline_max_size":200,
+  "kline_cache_check_timeout": 5,
+
+  "ha_enable": 1,
+  "ha_role": "slave",
+  "ha_master_timout": 20,
+  "ha_master_keepalive_listen": "2.0,manager:manager,service_keep_alive,market:market01",
+  "_ha_master_keepalive_listen": "slave时有效",
+  "_ha_role": "master or slave / slave接收mx上master的keepalive消息报文,默认不发送kline，等到master超时再转发kline"
+
+
+
+}

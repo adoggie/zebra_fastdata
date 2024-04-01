@@ -1,0 +1,29 @@
+{    
+    "logger.level":"DEBUG",
+    "logger.path": "./",
+    "logger.filename": "klogger.log",
+    "logger.stdout": 1,
+    "data_store_path": "./cc_data",
+    "_data_dump_elapsed": "刷新nosql到fs的时间间隔",
+    "data_dump_elapsed": 3600,
+
+    "service_id": "eldata-agent",
+    "service_type": "eldata-agent",
+    "secret_key":"1234567890abcdef1234567890abcdef",
+
+    "system_broker_addr_p": "tcp://172.16.10.253:15551",
+    "system_broker_addr_s": "tcp://172.16.10.253:15552",
+
+
+
+    "registry_client.enable": 0,
+    "registry_client.logger.level":"INFO",
+    "keep_alive_interval" : 5,
+    "dataset_list":[
+        {"data_dir":"./ohlcv","mx_addr":["tcp://172.16.10.253:15562","tcp://172.16.10.253:15554"]}
+    ],
+    "mongodb":{ "host":"172.16.30.3", "port": 27018 },
+    "databases":{
+        "ohlcv":"BSC_swap"
+    }
+}

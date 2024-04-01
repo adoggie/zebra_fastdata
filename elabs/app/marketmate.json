@@ -1,0 +1,26 @@
+{
+  "logger.level":"DEBUG",
+  "logger.path": "./",
+  "logger.filename": "marketmate.log",
+  "logger.stdout": 1,
+
+  "service_id": "marketmate01",
+  "service_type": "marketmate",
+  "secret_key": "1234567890abcdef1234567890abcdef",
+
+  "system_broker_addr_p": "tcp://172.16.10.253:15551",
+  "system_broker_addr_s": "tcp://172.16.10.253:15552",
+  "market_public_broker_addr": "tcp://172.16.10.253:15561",
+  "registry_url": "http://172.16.10.253:17027",
+
+  "registry_client.enable": 0,
+
+  "kline_cache_days" : 2,
+  "kline_cache_dir": "/tmp/kline",
+  "kline_max_size":200,
+  "kline_cache_check_timeout": 5,
+
+  "ha_enable": 1,
+  "ha_role": "master"
+
+}

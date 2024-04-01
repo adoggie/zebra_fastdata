@@ -1,0 +1,37 @@
+{
+
+  "logger.level":"DEBUG",
+  "logger.path": "./",
+  "logger.filename": "trade.log",
+  "logger.stdout": 1,
+
+  "service_id": "trade01",
+  "service_type": "trade",
+  "secret_key": "1234567890abcdef1234567890abcdef",
+  "ip": "",
+  "tag": "127.0.0.1/test",
+  "_system_broker_addr": "tcp://127.0.0.1:15555",
+  "system_broker_addr_p": "tcp://172.16.10.253:15551",
+  "system_broker_addr_s": "tcp://172.16.10.253:15552",
+  "position_broker_addr": "tcp://172.16.10.253:15558",
+  "position_sub_topic_prefix": "2.0,trade:trade",
+  "market_topic": "1.0",
+  "market_broker_addr": "tcp://127.0.0.1:15559",
+
+  "registry_client.enable": 0,
+  "registry_client.logger.level":"INFO",
+  "registry_url": "http://172.16.10.253:17027",
+
+  "_exchange": "过滤交易所名称，空则不过滤",
+  "exchange": "ftx",
+  "_account": "交易账号，空则不过滤",
+  "account": "",
+
+  "class": "elabs.trade.abc.MyTradeImpl",
+  "position_cache_file": "./position-trade01.txt",
+  "position_cache_interval": 10,
+  "timer_actions": [
+      ["trade_report", 5 ]
+    ]
+
+}
